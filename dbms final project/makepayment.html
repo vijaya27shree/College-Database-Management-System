@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUKDC Payment Page</title>
+    <style>
+       body {
+            font-family: 'Arial', sans-serif;
+            background: url('payment.jpeg') center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .payment-container {
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+            padding: 30px;
+            border-radius: 15px; /* Increased border-radius for rounded corners */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            width: 400px; /* Increased size of the payment container */
+            text-align: center;
+            color: #333; /* Changed font color */
+            font-size: 18px; /* Increased font size */
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Additional styling for payment method links */
+        a {
+            color: #4caf50;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+            display: inline-block;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        a:hover {
+            color: #45a049;
+        }
+
+        /* Additional styling for better responsiveness */
+        @media (max-width: 400px) {
+            .payment-container {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="payment-container">
+        
+
+        <form action="#" method="post">
+            <label for="paymentMethod">Payment Method:</label><br>
+            <a href="creditcard.php">Credit Card</a><br>
+            <a href="debit.php">Debit Card</a><br>
+            <a href="upi.html">UPI</a><br><br>
+
+
+           
+        </form>
+    </div>
+
+    
+</body>
+</html>

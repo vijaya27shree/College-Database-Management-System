@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXAM</title>
+    <style>
+       body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url(https://mitindia.edu/Mit_Codes_custom/MIT_banner/img/landscape/01.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: bold;
+}
+
+select {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #3498db;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+/* Additional styling for better readability */
+body, label, select, input {
+    font-size: 16px;
+}
+
+select, input {
+    margin-top: 8px;
+}
+
+.container {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: -1;
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form name="fs" action="dis.php" method="POST">
+            <label for="department">Select Department:</label>
+            <select name="department" required>
+                <option value="Information Technology">Information Technology</option>
+                <option value="Computer Science">Computer Science</option>
+                <option value="Production Engineering">Production Engineering</option>
+                <option value="Mechanical Engineering">Mechanical Engineering</option>
+                <option value="Instrumentation Engineering">Instrumentation Engineering</option>
+                <option value="ECE">ECE</option>s
+            </select>
+            <label for="semester">Select Semester:</label>
+            <select name="semester" required>
+                <option value="1">1</option>
+                <option value="2"> 2</option>
+                <option value="3"> 3</option>
+                <option value="4"> 4</option>
+                <option value="5"> 5</option>
+                <option value="6"> 6</option>
+                <option value="7"> 7</option>
+                <option value="8"> 8</option>
+            </select>
+            <input TYPE="SUBMIT" value="Submit">
+        </form>
+    </div>
+</body>
+
+</html>

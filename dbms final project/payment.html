@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUKDC Payment Page</title>
+    <style>
+       body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.payment-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+select,
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    background-color: #4caf50;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+a:hover {
+    background-color: #45a049;
+}
+
+/* Additional styling for better responsiveness */
+@media (max-width: 400px) {
+    .payment-container {
+        width: 90%;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="payment-container">
+        <form action="" method="post">
+            <label for="purpose">Payment Purpose:</label>
+            <select id="purpose" name="purpose" onchange="updateAmount()" required>
+                <option value="examFee">Exam Fee</option>
+                <option value="arrearFee">Arrear Fee</option>
+                <option value="semFee">Semester Fee</option>
+            </select>
+
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" name="amount" readonly>
+
+            <a href="makepayment.html">Make Payment</a>
+        </form>
+    </div>
+
+    <script>
+        function updateAmount() {
+            var purposeSelect = document.getElementById("purpose");
+            var amountInput = document.getElementById("amount");
+
+            if (purposeSelect.value === "examFee") {
+                amountInput.value = "1350";
+            } else if (purposeSelect.value === "arrearFee") {
+                amountInput.value = "250";
+            } else if (purposeSelect.value === "semFee") {
+                amountInput.value = "20000";
+            }
+        }
+    </script>
+
+</body>
+</html>

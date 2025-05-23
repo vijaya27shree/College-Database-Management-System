@@ -1,0 +1,100 @@
+/* Resetting margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General styles */
+body {
+    font-family: sans-serif;
+    background-color: #dee0e3;
+}
+
+/* Heading styles */
+.heading {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.heading h1 {
+    font-size: 50px;
+    color: #36455c;
+    margin-bottom: 10px;
+}
+
+.heading p {
+    font-size: 20px;
+    color: #666;
+    margin-bottom: 50px;
+}
+
+/* About Us section */
+.about-us {
+    display: flex;
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items horizontally */
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    width: 85%;
+    margin: auto;
+    padding: 20px; /* Adjust padding as needed */
+}
+
+.about-us img {
+    max-width: 80%; /* Ensure image doesn't exceed container width */
+    height: auto;
+    margin-bottom: 20px; /* Adding space below the image */
+    display: block; /* Ensures image is centered properly */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Content within the about-us section */
+.content {
+    text-align: center;
+    padding: 35px;
+    max-width: 600px; /* Limit content width */
+    margin: 0 auto; /* Center content */
+}
+
+.content h2 {
+    color: #36455c;
+    font-size: 24px;
+    margin: 15px 0;
+}
+
+.content p {
+    color: #666;
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 15px 0;
+}
+
+/* Read more button styles */
+.read-more-btn {
+    display: inline-block;
+    color: #fff;
+    background-color: #0084ff;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.2s ease;
+    text-decoration: none; /* Added for anchor tags */
+}
+
+.read-more-btn:hover {
+    background-color: #006dd6;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .about-us img {
+        max-width: 100%;
+    }
+    .content {
+        padding: 15px;
+        max-width: 100%;
+    }
+}
